@@ -6,7 +6,7 @@ import time
 import random
 import os
 
-
+client = discord.Client ()
 Client = commands.Bot(command_prefix = "+")
 Client.remove_command("help")
 owner = ["Insert-Owner-ID"]
@@ -128,4 +128,4 @@ async def removewarn(ctx, member: discord.Member):
         await Client.remove_roles(member, role)
 
                     
-Client.run(os.getenv('TOKEN'))
+client.run(os.getenv('TOKEN'))
